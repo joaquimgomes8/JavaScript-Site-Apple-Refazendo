@@ -8,7 +8,7 @@ Este projeto é uma **recriação do site da Apple**, desenvolvida com o objetiv
 
 - HTML5  
 - CSS3  
-- JavaScript (se aplicável)  
+- JavaScript
 - Git e GitHub  
 
 ## 🌐 Visualizar o Projeto
