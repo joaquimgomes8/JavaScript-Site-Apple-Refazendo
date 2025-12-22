@@ -1,0 +1,304 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center;     /* Alinha verticalmente */
+    gap: 20px;               /* Espaçamento entre os links */
+    
+    height: 44px;            /* Altura padrão */
+    background-color: rgba(251, 251, 253, 0.8); /* Cor clara com transparência */
+    backdrop-filter: blur(20px); /* Efeito de vidro embaçado */
+    
+    position: fixed;         /* Mantém o topo fixo ao rolar */
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20px;
+}
+
+.header-buttons {
+    color: #000000;          /* Cor do texto (quase preto) */
+    text-decoration: none;   /* Remove o sublinhado */
+    font-size: 12px;         /* Tamanho da fonte discreto */
+    font-family: "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.01em;
+    opacity: 0.8;            /* Deixa o texto levemente suave */
+    transition: opacity 0.3s ease; /* Suaviza o efeito de hover */
+}
+
+.header-buttons:hover {
+    opacity: 1;            
+}
+
+/* Estilização básica das imagens (ícones) */
+#img-logo-apple-header, 
+#img-research-header, 
+#img-store-header {
+    height: 18px;            /* Ajusta o tamanho dos ícones */
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#img-logo-apple-header:hover, 
+#img-research-header:hover, 
+#img-store-header:hover {
+    opacity: 1;
+}
+
+/*UP CONTAINER*/
+
+/* Container Principal */
+.homepod-mini-up-container {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between; /* Joga o título para a esquerda e a div de links para a direita */
+    align-items: center;           /* Centraliza tudo verticalmente */
+    
+    height: 52px;                  /* Altura característica da subnav da Apple */
+    padding: 0 15%;                /* Margem lateral para alinhar com o conteúdo do site */
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco levemente transparente */
+    backdrop-filter: blur(20px);   /* Efeito de desfoque (Glassmorphism) */
+    border-bottom: 1px solid #d2d2d7; /* Linha fina divisória */
+    
+    position: sticky;              /* Faz a barra grudar no topo ao rolar a página */
+    top: 44px;                     /* Altura do seu primeiro header (ajuste se necessário) */
+    z-index: 100;                  /* Garante que fique acima do conteúdo */
+}
+
+/* Estilo do Título (HomePod mini) */
+#title-up-container {
+    font-size: 21px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+    letter-spacing: -0.011em;      /* Ajuste fino de espaçamento das letras estilo Apple */
+    font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Div que segura os links e o botão */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;                     /* Espaçamento uniforme entre os links */
+}
+
+/* Estilo dos Links (Overview e Tech Specs) */
+.button-up-container {
+    text-decoration: none;
+    color: #1d1d1f;
+    font-size: 12px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.button-up-container:hover {
+    color: #0066cc;                /* Azul de destaque da Apple no hover */
+    opacity: 1;
+}
+
+/* Estilo do Botão Azul (Buy) */
+#buy-up-container {
+    background-color: #0071e3;     /* Azul oficial Apple */
+    color: #ffffff !important;     /* Força a cor branca no texto */
+    padding: 4px 11px;             /* Tamanho interno do botão */
+    border-radius: 980px;          /* Deixa o botão em formato de pílula */
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 1;                    /* Garante que ele não herde a opacidade dos outros links */
+}
+
+#buy-up-container:hover {
+    background-color: #0077ed;     /* Tom levemente mais claro ao passar o mouse */
+}
+
+/*------------------------CONTAINER---------------------*/
+
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna (um embaixo do outro) */
+    align-items: center;    /* Centraliza as imagens horizontalmente */
+    gap: 20px;              /* Cria um espaço entre a primeira e a segunda imagem */
+    width: 100%;
+}
+
+.container img {
+    max-width: 100%;        /* Garante que a imagem não ultrapasse a tela */
+    height: auto;
+}
+
+#img-mini-container {
+    max-width: 100%;         /* Impede que a imagem ultrapasse o container */
+    height: auto;
+}
+
+#text-youve-never-heard{
+    font-family: "SF Pro Display", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 80px;            /* Tamanho grande de impacto */
+    font-weight: 700;           /* Bem negrito */
+    text-align: center;         /* Centralizado */
+    color: #1d1d1f;             /* Cor padrão da Apple */
+    
+    line-height: 1.05;          /* Linhas bem próximas uma da outra */
+    letter-spacing: -0.02em;    /* Letras mais juntas (tracking negativo) */
+    
+    margin-top: 80px;           /* Espaçamento em relação ao topo */
+    max-width: 800px;           /* Limita a largura para forçar a quebra de linha */
+    margin-left: auto;          /* Centraliza o bloco na horizontal */
+    margin-right: auto;
+}
+
+@media (max-width: 734px) {
+    #text-youve-never-heard {
+        font-size: 48px;
+        max-width: 90%;
+    }
+}
+
+/*Textos coloridos*/
+
+.texts-colors-container {
+    /* Tipografia Apple */
+    font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-size: 56px;           /* Tamanho grande e impactante */
+    font-weight: 700;          /* Bem negrito */
+    text-align: center;        /* Centralizado */
+    line-height: 1.1;          /* Espaçamento entre linhas curto */
+    letter-spacing: -0.02em;   /* Letras mais juntas */
+    margin: 50px 0;            /* Espaço entre um bloco e outro */
+
+    /* Efeito de Gradiente */
+    background: linear-gradient(
+        to right, 
+        #ff9f0a, /* Laranja */
+        #ff375f, /* Rosa/Vermelho */
+        #bf5af2, /* Roxo */
+        #0a84ff  /* Azul */
+    );
+    
+    /* A Mágica: Corta o fundo no formato das letras e deixa o preenchimento transparente */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Garante que o gradiente apareça mesmo em blocos grandes */
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajuste para telas pequenas (celulares) */
+@media (max-width: 734px) {
+    .texts-colors-container {
+        font-size: 40px;
+        padding: 0 20px;
+    }
+}
+
+#text-five-bold-colors-container {
+    /* Tipografia e Alinhamento */
+    font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-size: 40px;           /* Tamanho intermediário entre o título principal e os links */
+    font-weight: 700;          /* Bem negrito */
+    text-align: center;        /* Centralizado horizontalmente */
+    color: #1d1d1f;            /* Cor quase preta oficial da Apple */
+    
+    /* Ajuste de Espaçamento (O toque especial) */
+    line-height: 1.1;          /* Aproxima as duas linhas de texto */
+    letter-spacing: -0.015em;  /* Deixa as letras um pouco mais juntas */
+    
+    /* Espaçamento do Bloco */
+    margin: 60px auto;         /* Espaço em cima/baixo e centraliza o bloco */
+    max-width: 600px;
+}
+
+/* Ajuste para telas de celular */
+@media (max-width: 734px) {
+    #text-five-bold-colors-container {
+        font-size: 32px;       /* Reduz um pouco no mobile */
+        padding: 0 20px;
+    }
+}
+
+/* Estilo para o título pequeno "Sound" */
+#text-sound-container {
+    margin-top: 200px;
+
+    font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-size: 19px;           /* Tamanho pequeno e discreto */
+    font-weight: 600;          /* Semi-bold */
+    color: #1d1d1f;            /* Preto oficial da Apple */
+    text-align: center;
+    margin-bottom: 15px;       /* Espaço entre ele e o texto colorido */
+}
+
+/* Estilo para o texto grande com gradiente */
+#text-nothing-short-container {
+    font-family: "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    font-size: 80px;           /* Tamanho grande de destaque */
+    font-weight: 700;          /* Bem negrito */
+    text-align: center;
+    line-height: 1.05;         /* Linhas bem próximas */
+    letter-spacing: -0.02em;   /* Letras compactas */
+    margin-top: 0;             /* Remove o espaço extra no topo */
+
+    /* Efeito de Gradiente Colorido */
+    background: linear-gradient(
+        to right, 
+        #ff9f0a, /* Laranja */
+        #ff375f, /* Rosa */
+        #bf5af2, /* Roxo */
+        #0a84ff  /* Azul */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 734px) {
+    #text-nothing-short-container {
+        font-size: 48px;
+    }
+}
+
+/* Container que envolve a imagem */
+.sound-image-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente (se houver altura) */
+    width: 100%;
+    padding: 80px 0;         /* Espaço grande em cima e embaixo como no site */
+    background-color: #ffffff;
+}
+
+/* Estilo da Imagem */
+#img-sound-containeer {
+    max-width: 800px;        /* Limita o tamanho máximo para não ficar gigante */
+    width: 90%;              /* Em telas pequenas, ocupa 90% da largura */
+    height: auto;            /* Mantém a proporção da imagem */
+    display: block;
+}
+
+.text-sound-img-container {
+    /* Centralização do Bloco */
+    max-width: 600px;           /* Limita a largura para o texto quebrar como na foto */
+    margin: 40px auto;          /* Centraliza a div na página (auto nas laterais) */
+    
+    /* Alinhamento e Estilo do Texto */
+    text-align: center;         /* Centraliza as linhas de texto */
+    font-family: "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;           /* Espaçamento entre linhas para melhor leitura */
+    color: #86868b;             /* Cinza clássico da Apple para parágrafos */
+}
+
+.text-sound-img-container b {
+    font-weight: 600;           /* Peso da fonte semi-bold */
+    color: #1d1d1f;             /* O texto em negrito é mais escuro */
+}
