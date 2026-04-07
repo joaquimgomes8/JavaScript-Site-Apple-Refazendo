@@ -15,5 +15,5 @@ Este projeto é uma **recriação do site da Apple**, desenvolvida com o objetiv
 
 Você pode acessar o site publicado pelo GitHub Pages no link abaixo:
 
-👉 **https://joaquimgomes8.github.io/apple-site-refazendo/**
+👉 **https://joaquimgomes8.github.io/JavaScript-Site-Apple-Refazendo/**
 
